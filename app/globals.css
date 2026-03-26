@@ -1,0 +1,119 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Moura Contabilidade — design tokens ─────────────────────────────────── */
+:root {
+  --color-primary:    #1B2B4B;
+  --color-accent:     #C9913A;
+  --color-background: #F8F6F1;
+  --color-surface:    #FFFFFF;
+  --color-text:       #141B2D;
+  --color-muted:      #6B7A94;
+  --color-dark:       #0F1929;
+
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  --shape-radius: 0px;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: var(--color-background);
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 400;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  color: var(--color-text);
+}
+
+/* ─── Reveal (reveal-on-scroll) ───────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── Navbar ──────────────────────────────────────────────────────────────── */
+.mc-nav {
+  transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
+}
+.mc-nav.scrolled {
+  background: rgba(248, 246, 241, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(27, 43, 75, 0.08);
+}
+
+/* ─── Mobile nav ──────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .mc-nav-links { display: none !important; }
+  .mc-nav-cta   { display: none !important; }
+  .mc-nav-menu  { display: flex !important; }
+}
+@media (min-width: 769px) {
+  .mc-nav-menu         { display: none !important; }
+  .mc-mobile-drawer    { display: none !important; }
+}
+
+/* ─── Grid mobile ─────────────────────────────────────────────────────────── */
+@media (max-width: 768px) {
+  .services-grid     { grid-template-columns: 1fr !important; }
+  .services-grid > * { grid-column: auto !important; }
+  .about-grid        { grid-template-columns: 1fr !important; }
+  .contact-grid      { grid-template-columns: 1fr !important; }
+  .testimonials-grid { grid-template-columns: 1fr !important; }
+  .stats-row         { grid-template-columns: 1fr 1fr !important; }
+}
+@media (max-width: 480px) {
+  .stats-row { grid-template-columns: 1fr !important; }
+}
+
+/* ─── Keyframes ───────────────────────────────────────────────────────────── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes lineGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+@keyframes scrollDown {
+  0%   { transform: translateY(-100%); opacity: 0; }
+  30%  { opacity: 1; }
+  70%  { opacity: 1; }
+  100% { transform: translateY(250%); opacity: 0; }
+}
+
+@keyframes pulseWa {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50%       { box-shadow: 0 0 0 10px rgba(37, 211, 102, 0); }
+}
+
+/* ─── Reduced motion ──────────────────────────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    transition-duration: 0.001ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
