@@ -4,7 +4,7 @@
 
 import type { Metadata } from "next";
 import { config } from "../site.config";
-import { Grain } from "@agency/ui";
+import { Grain } from "../lib/ui";
 import "./globals.css";
 
 export const metadata: Metadata = {

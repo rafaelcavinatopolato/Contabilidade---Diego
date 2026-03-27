@@ -1,13 +1,10 @@
 import type { Config } from "tailwindcss";
 
-const baseConfig = require("@agency/config/tailwind");
-
 const config: Config = {
-  presets: [baseConfig],
   content: [
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
-    "../../packages/ui/**/*.{ts,tsx}",
+    "./lib/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {

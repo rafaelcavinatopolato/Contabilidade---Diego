@@ -5,7 +5,7 @@
 // 3 cards com aspas decorativas em accent + autor + empresa.
 // Grid 3 colunas desktop, 1 coluna mobile.
 
-import { Reveal, LineGrow } from "@agency/ui";
+import { Reveal, LineGrow } from "../lib/ui";
 
 interface TestimonialItem {
   quote: string;

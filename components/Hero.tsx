@@ -5,7 +5,7 @@
 // Headline entra com WordReveal. Linha de accent separa o headline do sub.
 // CTA principal → WhatsApp. CTA secundário → #servicos.
 
-import { WordReveal, DotGrid, LineGrow } from "@agency/ui";
+import { WordReveal, DotGrid, LineGrow } from "../lib/ui";
 
 interface HeroProps {
   headline: string;

@@ -5,7 +5,7 @@
 // 4 números com counter-up + LineGrow dividindo os itens.
 // Linguagem de precisão: os dados falam pela empresa.
 
-import { Reveal, LineGrow, useCounterUp } from "@agency/ui";
+import { Reveal, LineGrow, useCounterUp } from "../lib/ui";
 
 interface StatItem {
   value: number;

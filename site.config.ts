@@ -1,4 +1,4 @@
-import type { SiteConfig } from "@agency/config";
+import type { SiteConfig } from "./lib/config";
 
 export const config: SiteConfig = {
   brand: {

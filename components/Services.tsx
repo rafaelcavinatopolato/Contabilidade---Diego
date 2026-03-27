@@ -5,7 +5,7 @@
 // 4 cards com LineGrow no topo, ícones Lucide e texto em branco.
 // Grid 2×2 em desktop, 1 coluna em mobile.
 
-import { Reveal, LineGrow, DotGrid } from "@agency/ui";
+import { Reveal, LineGrow, DotGrid } from "../lib/ui";
 import {
   BarChart3,
   FileCheck,

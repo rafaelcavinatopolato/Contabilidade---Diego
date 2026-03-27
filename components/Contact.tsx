@@ -5,7 +5,7 @@
 // Select de serviços da Moura. CTA WhatsApp em destaque.
 
 import { useState } from "react";
-import { Reveal, LineGrow } from "@agency/ui";
+import { Reveal, LineGrow } from "../lib/ui";
 import { Mail, Phone, MapPin, MessageCircle, Instagram } from "lucide-react";
 
 interface ContactProps {

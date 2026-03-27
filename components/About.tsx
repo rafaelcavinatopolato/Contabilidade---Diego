@@ -5,7 +5,7 @@
 // DotGrid sutil no fundo. Eyebrow + LineGrow + headline + parágrafos.
 // Destaques de diferencial em cards compactos na parte inferior.
 
-import { Reveal, LineGrow, DotGrid } from "@agency/ui";
+import { Reveal, LineGrow, DotGrid } from "../lib/ui";
 
 interface AboutProps {
   eyebrow?: string;
