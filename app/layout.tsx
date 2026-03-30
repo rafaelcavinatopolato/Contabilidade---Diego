@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import { config } from "../site.config";
 import { Grain } from "../lib/ui";
 import "./globals.css";
+import { MadeByPolatos } from "@agency/ui";
 
 export const metadata: Metadata = {
   title: config.meta.title,
@@ -30,16 +31,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const cssVars = {
-    "--color-primary":    "#1B2B4B",
-    "--color-accent":     "#C9913A",
+    "--color-primary": "#1B2B4B",
+    "--color-accent": "#C9913A",
     "--color-background": "#F8F6F1",
-    "--color-surface":    "#FFFFFF",
-    "--color-text":       "#141B2D",
-    "--color-muted":      "#6B7A94",
-    "--color-dark":       "#0F1929",
-    "--font-heading":     "'Plus Jakarta Sans', system-ui, sans-serif",
-    "--font-body":        "'Inter', system-ui, sans-serif",
-    "--shape-radius":     "0px",
+    "--color-surface": "#FFFFFF",
+    "--color-text": "#141B2D",
+    "--color-muted": "#6B7A94",
+    "--color-dark": "#0F1929",
+    "--font-heading": "'Plus Jakarta Sans', system-ui, sans-serif",
+    "--font-body": "'Inter', system-ui, sans-serif",
+    "--shape-radius": "0px",
   } as React.CSSProperties;
 
   return (
@@ -89,7 +90,13 @@ export default function RootLayout({
         {/* Grain — textura analógica muito sutil */}
         <Grain opacity={0.018} />
         {children}
+        <MadeByPolatos
+          className="bg-[var(--color-dark)]"
+          theme="dark"
+          align="center"
+        />
       </body>
+      {/* Crédito Polatos */}
     </html>
   );
 }

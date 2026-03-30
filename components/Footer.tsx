@@ -12,7 +12,8 @@ export function Footer() {
     <footer
       style={{
         background: "var(--color-dark)",
-        padding: "clamp(48px, 6vw, 72px) clamp(24px, 7vw, 96px) clamp(24px, 3vw, 32px)",
+        padding:
+          "clamp(48px, 6vw, 72px) clamp(24px, 7vw, 96px) clamp(24px, 3vw, 32px)",
       }}
     >
       {/* Linha accent no topo */}
@@ -73,24 +74,32 @@ export function Footer() {
               color: "rgba(248,246,241,0.38)",
             }}
           >
-            R. Raimundo Nonato Ribeiro, 155<br />
-            Centro — Trairi, CE<br />
+            R. Raimundo Nonato Ribeiro, 155
+            <br />
+            Centro — Trairi, CE
+            <br />
             contato@mouracontabilidadesolucoes.com.br
           </p>
         </div>
 
         {/* Links de navegação */}
         <nav aria-label="Links do footer">
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: "8px 48px" }}>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(2, 1fr)",
+              gap: "8px 48px",
+            }}
+          >
             {[
-              { label: "A Moura",                  href: "#sobre" },
-              { label: "Contabilidade Comercial",   href: "#servicos" },
-              { label: "Serviços",                  href: "#servicos" },
-              { label: "Planejamento Tributário",   href: "#servicos" },
-              { label: "Depoimentos",               href: "#depoimentos" },
-              { label: "Departamento Pessoal",      href: "#servicos" },
-              { label: "Contato",                   href: "#contato" },
-              { label: "Contabilidade Fiscal",      href: "#servicos" },
+              { label: "A Moura", href: "#sobre" },
+              { label: "Contabilidade Comercial", href: "#servicos" },
+              { label: "Serviços", href: "#servicos" },
+              { label: "Planejamento Tributário", href: "#servicos" },
+              { label: "Depoimentos", href: "#depoimentos" },
+              { label: "Departamento Pessoal", href: "#servicos" },
+              { label: "Contato", href: "#contato" },
+              { label: "Contabilidade Fiscal", href: "#servicos" },
             ].map((link) => (
               <a
                 key={link.label + link.href}
@@ -104,8 +113,14 @@ export function Footer() {
                   textDecoration: "none",
                   transition: "color 0.3s ease",
                 }}
-                onMouseEnter={(e) => ((e.target as HTMLElement).style.color = "var(--color-accent)")}
-                onMouseLeave={(e) => ((e.target as HTMLElement).style.color = "rgba(248,246,241,0.35)")}
+                onMouseEnter={(e) =>
+                  ((e.target as HTMLElement).style.color =
+                    "var(--color-accent)")
+                }
+                onMouseLeave={(e) =>
+                  ((e.target as HTMLElement).style.color =
+                    "rgba(248,246,241,0.35)")
+                }
               >
                 {link.label}
               </a>
@@ -130,16 +145,34 @@ export function Footer() {
           </p>
           <div style={{ display: "flex", gap: "12px" }}>
             {[
-              { icon: <Instagram size={18} strokeWidth={1.25} aria-hidden />, href: "https://instagram.com/mouracontabilidade_oficial", label: "Instagram" },
-              { icon: <MessageCircle size={18} strokeWidth={1.25} aria-hidden />, href: "https://wa.me/558533511611", label: "WhatsApp" },
-              { icon: <Phone size={18} strokeWidth={1.25} aria-hidden />, href: "tel:+558533511611", label: "Telefone" },
+              {
+                icon: <Instagram size={18} strokeWidth={1.25} aria-hidden />,
+                href: "https://instagram.com/mouracontabilidade_oficial",
+                label: "Instagram",
+              },
+              {
+                icon: (
+                  <MessageCircle size={18} strokeWidth={1.25} aria-hidden />
+                ),
+                href: "https://wa.me/558533511611",
+                label: "WhatsApp",
+              },
+              {
+                icon: <Phone size={18} strokeWidth={1.25} aria-hidden />,
+                href: "tel:+558533511611",
+                label: "Telefone",
+              },
             ].map((social) => (
               <a
                 key={social.label}
                 href={social.href}
                 aria-label={social.label}
                 target={social.href.startsWith("http") ? "_blank" : undefined}
-                rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
+                rel={
+                  social.href.startsWith("http")
+                    ? "noopener noreferrer"
+                    : undefined
+                }
                 style={{
                   display: "flex",
                   alignItems: "center",
@@ -152,12 +185,16 @@ export function Footer() {
                   transition: "border-color 0.3s ease, color 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,145,58,0.6)";
-                  (e.currentTarget as HTMLElement).style.color = "var(--color-accent)";
+                  (e.currentTarget as HTMLElement).style.borderColor =
+                    "rgba(201,145,58,0.6)";
+                  (e.currentTarget as HTMLElement).style.color =
+                    "var(--color-accent)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(201,145,58,0.2)";
-                  (e.currentTarget as HTMLElement).style.color = "rgba(248,246,241,0.4)";
+                  (e.currentTarget as HTMLElement).style.borderColor =
+                    "rgba(201,145,58,0.2)";
+                  (e.currentTarget as HTMLElement).style.color =
+                    "rgba(248,246,241,0.4)";
                 }}
               >
                 {social.icon}
@@ -187,7 +224,8 @@ export function Footer() {
             color: "rgba(248,246,241,0.2)",
           }}
         >
-          © {year} Moura Contabilidade & Soluções Empresariais. Todos os direitos reservados.
+          © {year} Moura Contabilidade & Soluções Empresariais. Todos os
+          direitos reservados.
         </span>
         <span
           style={{

@@ -5,6 +5,7 @@ const config: Config = {
     "./app/**/*.{ts,tsx}",
     "./components/**/*.{ts,tsx}",
     "./lib/**/*.{ts,tsx}",
+    "../../packages/ui/**/*.{ts,tsx}",
   ],
   theme: {
     extend: {

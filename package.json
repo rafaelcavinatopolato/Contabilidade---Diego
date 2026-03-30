@@ -10,6 +10,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@agency/ui": "workspace:*",
     "lucide-react": "^0.462.0",
     "next": "^15",
     "react": "^19",
