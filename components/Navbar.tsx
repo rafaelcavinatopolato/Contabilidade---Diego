@@ -22,10 +22,11 @@ export function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const logoNameColor  = scrolled ? "var(--color-primary)" : "#F8F6F1";
-  const logoSubColor   = scrolled ? "var(--color-muted)"   : "rgba(248,246,241,0.55)";
-  const linkColor      = scrolled ? "var(--color-text)"    : "rgba(248,246,241,0.88)";
-  const accentDot      = "var(--color-accent)";
+  // Hero é claro — texto sempre escuro independente do scroll
+  const logoNameColor = "var(--color-primary)";
+  const logoSubColor  = "var(--color-muted)";
+  const linkColor     = "var(--color-text)";
+  const accentDot     = "var(--color-accent)";
 
   return (
     <>
@@ -114,19 +115,17 @@ export function Navbar() {
               fontWeight: 500,
               fontSize: "13px",
               letterSpacing: "0.06em",
-              color: scrolled ? "#F8F6F1" : "var(--color-dark)",
-              background: scrolled ? "var(--color-primary)" : "var(--color-accent)",
+              color: "#FAF3EC",
+              background: "var(--color-primary)",
               padding: "10px 22px",
               textDecoration: "none",
-              transition: "background 0.3s ease, color 0.3s ease",
+              transition: "background 0.3s ease",
             }}
             onMouseEnter={(e) => {
               (e.currentTarget as HTMLElement).style.background = "var(--color-accent)";
-              (e.currentTarget as HTMLElement).style.color = "#F8F6F1";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.background = scrolled ? "var(--color-primary)" : "var(--color-accent)";
-              (e.currentTarget as HTMLElement).style.color = scrolled ? "#F8F6F1" : "var(--color-dark)";
+              (e.currentTarget as HTMLElement).style.background = "var(--color-primary)";
             }}
           >
             Diagnóstico Gratuito
@@ -154,7 +153,7 @@ export function Navbar() {
                   display: "block",
                   width: "24px",
                   height: "1px",
-                  background: scrolled ? "var(--color-primary)" : "#F8F6F1",
+                  background: "var(--color-primary)",
                   transition: "background 0.3s ease",
                 }}
               />
@@ -171,20 +170,20 @@ export function Navbar() {
             position: "fixed",
             inset: 0,
             zIndex: 100,
-            background: "var(--color-dark)",
+            background: "var(--color-surface)",
             display: "flex",
             flexDirection: "column",
             padding: "24px clamp(24px, 5vw, 64px)",
           }}
         >
           <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", height: "72px" }}>
-            <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: "17px", letterSpacing: "0.04em", color: "#F8F6F1" }}>
+            <div style={{ fontFamily: "var(--font-heading)", fontWeight: 700, fontSize: "17px", letterSpacing: "0.04em", color: "var(--color-primary)" }}>
               Moura Contabilidade
             </div>
             <button
               aria-label="Fechar menu"
               onClick={() => setMenuOpen(false)}
-              style={{ background: "none", border: "none", cursor: "pointer", fontSize: "28px", color: "#F8F6F1", lineHeight: 1 }}
+              style={{ background: "none", border: "none", cursor: "pointer", fontSize: "28px", color: "var(--color-text)", lineHeight: 1 }}
             >
               ×
             </button>
@@ -200,10 +199,10 @@ export function Navbar() {
                   fontFamily: "var(--font-heading)",
                   fontWeight: 300,
                   fontSize: "36px",
-                  color: "rgba(248,246,241,0.85)",
+                  color: "var(--color-text)",
                   textDecoration: "none",
                   padding: "20px 0",
-                  borderBottom: "1px solid rgba(201,145,58,0.15)",
+                  borderBottom: "1px solid rgba(139,69,19,0.12)",
                   transition: "color 0.3s ease",
                 }}
               >
@@ -219,8 +218,8 @@ export function Navbar() {
               marginTop: "48px",
               display: "block",
               textAlign: "center",
-              background: "var(--color-accent)",
-              color: "var(--color-dark)",
+              background: "var(--color-primary)",
+              color: "#FAF3EC",
               padding: "18px",
               fontFamily: "var(--font-body)",
               fontWeight: 600,

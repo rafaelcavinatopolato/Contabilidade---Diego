@@ -25,19 +25,19 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
         display: "flex",
         alignItems: "flex-end",
         overflow: "hidden",
-        background: "var(--color-dark)",
+        background: "var(--color-background)",
       }}
     >
       {/* DotGrid — linguagem de precisão e dados */}
-      <DotGrid color="#ffffff" opacity={0.05} size={28} dotSize={1.2} />
+      <DotGrid color="#8B4513" opacity={0.07} size={28} dotSize={1.2} />
 
-      {/* Gradiente de fundo — reforça o navy */}
+      {/* Gradiente sutil de profundidade */}
       <div
         aria-hidden
         style={{
           position: "absolute",
           inset: 0,
-          background: "radial-gradient(ellipse 80% 60% at 20% 50%, rgba(27,43,75,0.6) 0%, transparent 70%)",
+          background: "radial-gradient(ellipse 70% 60% at 10% 60%, rgba(212,130,74,0.12) 0%, transparent 65%)",
           pointerEvents: "none",
         }}
       />
@@ -91,7 +91,7 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
               fontWeight: 300,
               fontSize: "11px",
               letterSpacing: "0.28em",
-              color: "rgba(248,246,241,0.55)",
+              color: "var(--color-muted)",
               textTransform: "uppercase",
             }}
           >
@@ -113,7 +113,7 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
             font-size: clamp(36px, 5.5vw, 72px) !important;
             line-height: 1.1 !important;
             letter-spacing: -0.02em !important;
-            color: #F8F6F1 !important;
+            color: var(--color-text) !important;
           }
         `}</style>
 
@@ -142,7 +142,7 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
             fontWeight: 300,
             fontSize: "clamp(15px, 1.5vw, 18px)",
             lineHeight: 1.7,
-            color: "rgba(248,246,241,0.65)",
+            color: "rgba(44,26,14,0.65)",
             maxWidth: "540px",
             marginTop: "24px",
             opacity: 0,
@@ -176,8 +176,8 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
               fontWeight: 600,
               fontSize: "13px",
               letterSpacing: "0.06em",
-              color: "var(--color-dark)",
-              background: "var(--color-accent)",
+              color: "#FAF3EC",
+              background: "var(--color-primary)",
               padding: "16px 32px",
               textDecoration: "none",
               transition: "opacity 0.3s ease",
@@ -197,19 +197,19 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
               fontWeight: 400,
               fontSize: "13px",
               letterSpacing: "0.06em",
-              color: "rgba(248,246,241,0.75)",
-              border: "1px solid rgba(248,246,241,0.25)",
+              color: "rgba(44,26,14,0.75)",
+              border: "1px solid rgba(44,26,14,0.25)",
               padding: "16px 32px",
               textDecoration: "none",
               transition: "border-color 0.3s ease, color 0.3s ease",
             }}
             onMouseEnter={(e) => {
-              (e.currentTarget as HTMLElement).style.borderColor = "rgba(248,246,241,0.6)";
-              (e.currentTarget as HTMLElement).style.color = "#F8F6F1";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(44,26,14,0.6)";
+              (e.currentTarget as HTMLElement).style.color = "#2C1A0E";
             }}
             onMouseLeave={(e) => {
-              (e.currentTarget as HTMLElement).style.borderColor = "rgba(248,246,241,0.25)";
-              (e.currentTarget as HTMLElement).style.color = "rgba(248,246,241,0.75)";
+              (e.currentTarget as HTMLElement).style.borderColor = "rgba(44,26,14,0.25)";
+              (e.currentTarget as HTMLElement).style.color = "rgba(44,26,14,0.75)";
             }}
           >
             Nossos Serviços
@@ -235,7 +235,7 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
               fontWeight: 300,
               fontSize: "10px",
               letterSpacing: "0.22em",
-              color: "rgba(248,246,241,0.35)",
+              color: "rgba(44,26,14,0.35)",
               textTransform: "uppercase",
             }}
           >
@@ -245,7 +245,7 @@ export function Hero({ headline, subheadline, cta }: HeroProps) {
             style={{
               width: "1px",
               height: "40px",
-              background: "rgba(248,246,241,0.15)",
+              background: "rgba(44,26,14,0.15)",
               overflow: "hidden",
               position: "relative",
             }}

@@ -6,11 +6,11 @@ export const config: SiteConfig = {
     logo: "/logo.svg",
     favicon: "/favicon.ico",
     colors: {
-      primary:    "#1B2B4B",  // navy profundo
-      accent:     "#C9913A",  // dourado-âmbar nordestino
-      background: "#F8F6F1",  // off-white quente
-      text:       "#141B2D",  // quase preto azulado
-      dark:       "#0F1929",  // dark sections
+      primary:    "#8B4513",  // marrom/terra — identidade Instagram
+      accent:     "#D4824A",  // laranja suave — destaque
+      background: "#F5E6D3",  // bege/creme — fundo principal
+      text:       "#2C1A0E",  // marrom escuro — texto
+      dark:       "#2C1A0E",  // mesmo tom escuro — rodapé
     },
     fonts: {
       heading: "Plus Jakarta Sans",

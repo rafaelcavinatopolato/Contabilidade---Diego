@@ -4,13 +4,13 @@
 
 /* ─── Moura Contabilidade — design tokens ─────────────────────────────────── */
 :root {
-  --color-primary:    #1B2B4B;
-  --color-accent:     #C9913A;
-  --color-background: #F8F6F1;
-  --color-surface:    #FFFFFF;
-  --color-text:       #141B2D;
-  --color-muted:      #6B7A94;
-  --color-dark:       #0F1929;
+  --color-primary:    #8B4513;
+  --color-accent:     #D4824A;
+  --color-background: #F5E6D3;
+  --color-surface:    #FAF3EC;
+  --color-text:       #2C1A0E;
+  --color-muted:      #9B7355;
+  --color-dark:       #2C1A0E;
 
   --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
   --font-body:    'Inter', system-ui, sans-serif;
@@ -56,10 +56,10 @@ h1, h2, h3, h4, h5, h6 {
   transition: background 0.4s ease, backdrop-filter 0.4s ease, box-shadow 0.4s ease;
 }
 .mc-nav.scrolled {
-  background: rgba(248, 246, 241, 0.96);
+  background: rgba(250, 243, 236, 0.97);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(27, 43, 75, 0.08);
+  box-shadow: 0 1px 0 rgba(139, 69, 19, 0.1);
 }
 
 /* ─── Mobile nav ──────────────────────────────────────────────────────────── */

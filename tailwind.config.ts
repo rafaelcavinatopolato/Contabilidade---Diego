@@ -9,6 +9,13 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        primary:    "#8B4513",
+        secondary:  "#D4824A",
+        background: "#F5E6D3",
+        surface:    "#FAF3EC",
+        foreground: "#2C1A0E",
+      },
       keyframes: {
         fadeUp: {
           from: { opacity: "0", transform: "translateY(16px)" },

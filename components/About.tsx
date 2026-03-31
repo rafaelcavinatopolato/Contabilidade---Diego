@@ -32,7 +32,7 @@ export function About({ eyebrow, title, text, image }: AboutProps) {
       }}
     >
       {/* DotGrid de fundo — cor primary em opacidade muito baixa */}
-      <DotGrid color="#1B2B4B" opacity={0.035} size={24} dotSize={1} />
+      <DotGrid color="var(--color-primary)" opacity={0.07} size={24} dotSize={1} />
 
       <div
         className="about-grid"
@@ -109,7 +109,7 @@ export function About({ eyebrow, title, text, image }: AboutProps) {
             <div
               style={{
                 marginTop: "40px",
-                borderTop: "1px solid rgba(27,43,75,0.1)",
+                borderTop: "1px solid rgba(139,69,19,0.1)",
                 paddingTop: "36px",
                 display: "flex",
                 flexDirection: "column",
@@ -180,7 +180,7 @@ export function About({ eyebrow, title, text, image }: AboutProps) {
               style={{
                 width: "100%",
                 height: "100%",
-                background: "linear-gradient(135deg, #1B2B4B 0%, #0F1929 100%)",
+                background: "linear-gradient(135deg, #C5956A 0%, #8B4513 100%)",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -193,13 +193,13 @@ export function About({ eyebrow, title, text, image }: AboutProps) {
                 style={{
                   width: "64px",
                   height: "64px",
-                  border: "1px solid rgba(201,145,58,0.3)",
+                  border: "1px solid rgba(212,130,74,0.4)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                 }}
               >
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(201,145,58,0.6)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="rgba(212,130,74,0.8)" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
                   <path d="M20 7H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2Z"/>
                   <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
                 </svg>
@@ -210,7 +210,7 @@ export function About({ eyebrow, title, text, image }: AboutProps) {
                   fontWeight: 300,
                   fontSize: "11px",
                   letterSpacing: "0.22em",
-                  color: "rgba(248,246,241,0.3)",
+                  color: "rgba(250,243,236,0.6)",
                   textTransform: "uppercase",
                 }}
               >

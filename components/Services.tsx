@@ -31,14 +31,14 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
     <section
       id="servicos"
       style={{
-        background: "var(--color-dark)",
+        background: "var(--color-background)",
         padding: "clamp(80px, 10vw, 128px) clamp(24px, 7vw, 96px)",
         position: "relative",
         overflow: "hidden",
       }}
     >
       {/* DotGrid branco sutil */}
-      <DotGrid color="#ffffff" opacity={0.04} size={28} dotSize={1} />
+      <DotGrid color="var(--color-primary)" opacity={0.06} size={28} dotSize={1} />
 
       {/* Header */}
       <div
@@ -58,7 +58,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
                   fontWeight: 300,
                   fontSize: "11px",
                   letterSpacing: "0.28em",
-                  color: "rgba(201,145,58,0.8)",
+                  color: "var(--color-muted)",
                   textTransform: "uppercase",
                   display: "block",
                   marginBottom: "8px",
@@ -78,7 +78,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
               fontWeight: 700,
               fontSize: "clamp(28px, 3.5vw, 46px)",
               lineHeight: 1.15,
-              color: "#F8F6F1",
+              color: "var(--color-text)",
               letterSpacing: "-0.02em",
             }}
           >
@@ -94,7 +94,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
           display: "grid",
           gridTemplateColumns: "repeat(2, 1fr)",
           gap: "1px",
-          background: "rgba(248,246,241,0.06)",
+          background: "rgba(139,69,19,0.08)",
           position: "relative",
           zIndex: 1,
         }}
@@ -105,7 +105,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
             <Reveal key={item.title} delay={i * 100}>
               <div
                 style={{
-                  background: "rgba(15,25,41,0.8)",
+                  background: "var(--color-surface)",
                   padding: "clamp(32px, 4vw, 48px)",
                   position: "relative",
                   transition: "background 0.35s ease",
@@ -113,10 +113,10 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
                   height: "100%",
                 }}
                 onMouseEnter={(e) =>
-                  ((e.currentTarget as HTMLElement).style.background = "rgba(27,43,75,0.9)")
+                  ((e.currentTarget as HTMLElement).style.background = "#F5E6D3")
                 }
                 onMouseLeave={(e) =>
-                  ((e.currentTarget as HTMLElement).style.background = "rgba(15,25,41,0.8)")
+                  ((e.currentTarget as HTMLElement).style.background = "var(--color-surface)")
                 }
               >
                 {/* LineGrow no topo do card */}
@@ -151,7 +151,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
                     fontWeight: 700,
                     fontSize: "11px",
                     letterSpacing: "0.14em",
-                    color: "rgba(201,145,58,0.25)",
+                    color: "rgba(212,130,74,0.3)",
                   }}
                 >
                   0{i + 1}
@@ -164,7 +164,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
                     fontWeight: 600,
                     fontSize: "clamp(19px, 2vw, 24px)",
                     lineHeight: 1.25,
-                    color: "#F8F6F1",
+                    color: "var(--color-text)",
                     marginBottom: "16px",
                     letterSpacing: "-0.01em",
                   }}
@@ -179,7 +179,7 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
                     fontWeight: 300,
                     fontSize: "14px",
                     lineHeight: 1.8,
-                    color: "rgba(248,246,241,0.55)",
+                    color: "rgba(44,26,14,0.65)",
                   }}
                 >
                   {item.description}
@@ -210,8 +210,8 @@ export function Services({ eyebrow, title, items }: ServicesProps) {
               fontWeight: 500,
               fontSize: "13px",
               letterSpacing: "0.08em",
-              color: "var(--color-dark)",
-              background: "var(--color-accent)",
+              color: "#FAF3EC",
+              background: "var(--color-primary)",
               padding: "16px 36px",
               textDecoration: "none",
               transition: "opacity 0.3s ease",

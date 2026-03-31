@@ -64,7 +64,7 @@ export function Stats() {
       style={{
         background: "var(--color-surface)",
         position: "relative",
-        borderBottom: "1px solid rgba(27,43,75,0.08)",
+        borderBottom: "1px solid rgba(139,69,19,0.08)",
       }}
     >
       {/* Linha accent topo */}
@@ -97,7 +97,7 @@ export function Stats() {
                     top: "25%",
                     height: "50%",
                     width: "1px",
-                    background: "rgba(27,43,75,0.1)",
+                    background: "rgba(139,69,19,0.1)",
                   }}
                 />
               )}

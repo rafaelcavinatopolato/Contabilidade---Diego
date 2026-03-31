@@ -68,7 +68,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
     <section
       id="contato"
       style={{
-        background: "var(--color-primary)",
+        background: "var(--color-dark)",
         padding: "clamp(80px, 10vw, 128px) clamp(24px, 7vw, 96px)",
         position: "relative",
         overflow: "hidden",
@@ -99,7 +99,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
                   fontWeight: 300,
                   fontSize: "11px",
                   letterSpacing: "0.28em",
-                  color: "rgba(201,145,58,0.7)",
+                  color: "rgba(212,130,74,0.7)",
                   textTransform: "uppercase",
                   display: "block",
                   marginBottom: "8px",
@@ -167,7 +167,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
             <div
               style={{
                 padding: "48px",
-                border: "1px solid rgba(201,145,58,0.25)",
+                border: "1px solid rgba(212,130,74,0.25)",
                 textAlign: "center",
               }}
             >
@@ -224,7 +224,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
                     id="c-name" type="text" required placeholder="Seu nome completo"
                     value={formData.name} onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     style={inputStyle}
-                    onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "rgba(201,145,58,0.6)")}
+                    onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "rgba(212,130,74,0.6)")}
                     onBlur={(e)  => ((e.target as HTMLInputElement).style.borderColor = "rgba(248,246,241,0.15)")}
                   />
                 </div>
@@ -234,7 +234,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
                     id="c-phone" type="tel" placeholder="(85) 99999-9999"
                     value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     style={inputStyle}
-                    onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "rgba(201,145,58,0.6)")}
+                    onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "rgba(212,130,74,0.6)")}
                     onBlur={(e)  => ((e.target as HTMLInputElement).style.borderColor = "rgba(248,246,241,0.15)")}
                   />
                 </div>
@@ -246,7 +246,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
                   id="c-email" type="email" required placeholder="seu@email.com"
                   value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                   style={inputStyle}
-                  onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "rgba(201,145,58,0.6)")}
+                  onFocus={(e) => ((e.target as HTMLInputElement).style.borderColor = "rgba(212,130,74,0.6)")}
                   onBlur={(e)  => ((e.target as HTMLInputElement).style.borderColor = "rgba(248,246,241,0.15)")}
                 />
               </div>
@@ -258,9 +258,9 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
                   value={formData.service} onChange={(e) => setFormData({ ...formData, service: e.target.value })}
                   style={{ ...inputStyle, cursor: "pointer", appearance: "none" as const }}
                 >
-                  <option value="" style={{ background: "#1B2B4B" }}>Selecione um serviço</option>
+                  <option value="" style={{ background: "#2C1A0E" }}>Selecione um serviço</option>
                   {SERVICES.map((s) => (
-                    <option key={s} value={s} style={{ background: "#1B2B4B" }}>{s}</option>
+                    <option key={s} value={s} style={{ background: "#2C1A0E" }}>{s}</option>
                   ))}
                 </select>
               </div>
@@ -271,7 +271,7 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
                   id="c-message" required rows={4} placeholder="Conte um pouco sobre sua empresa e o que precisa..."
                   value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   style={{ ...inputStyle, resize: "vertical", minHeight: "110px" }}
-                  onFocus={(e) => ((e.target as HTMLTextAreaElement).style.borderColor = "rgba(201,145,58,0.6)")}
+                  onFocus={(e) => ((e.target as HTMLTextAreaElement).style.borderColor = "rgba(212,130,74,0.6)")}
                   onBlur={(e)  => ((e.target as HTMLTextAreaElement).style.borderColor = "rgba(248,246,241,0.15)")}
                 />
               </div>
@@ -305,31 +305,31 @@ export function Contact({ eyebrow, title, titleAccent, subtitle, email, phone, a
           <div style={{ display: "flex", flexDirection: "column", gap: "32px" }}>
             {[
               {
-                icon: <Phone size={18} color="rgba(201,145,58,0.7)" strokeWidth={1.25} aria-hidden />,
+                icon: <Phone size={18} color="rgba(212,130,74,0.7)" strokeWidth={1.25} aria-hidden />,
                 label: "Telefone",
                 value: phone,
                 href: `tel:${phone.replace(/\D/g, "")}`,
               },
               {
-                icon: <MessageCircle size={18} color="rgba(201,145,58,0.7)" strokeWidth={1.25} aria-hidden />,
+                icon: <MessageCircle size={18} color="rgba(212,130,74,0.7)" strokeWidth={1.25} aria-hidden />,
                 label: "WhatsApp",
                 value: phone,
                 href: whatsappHref,
               },
               {
-                icon: <Mail size={18} color="rgba(201,145,58,0.7)" strokeWidth={1.25} aria-hidden />,
+                icon: <Mail size={18} color="rgba(212,130,74,0.7)" strokeWidth={1.25} aria-hidden />,
                 label: "E-mail",
                 value: email,
                 href: `mailto:${email}`,
               },
               {
-                icon: <MapPin size={18} color="rgba(201,145,58,0.7)" strokeWidth={1.25} aria-hidden />,
+                icon: <MapPin size={18} color="rgba(212,130,74,0.7)" strokeWidth={1.25} aria-hidden />,
                 label: "Endereço",
                 value: address,
                 href: undefined,
               },
               {
-                icon: <Instagram size={18} color="rgba(201,145,58,0.7)" strokeWidth={1.25} aria-hidden />,
+                icon: <Instagram size={18} color="rgba(212,130,74,0.7)" strokeWidth={1.25} aria-hidden />,
                 label: "Instagram",
                 value: "@mouracontabilidade_oficial",
                 href: "https://instagram.com/mouracontabilidade_oficial",

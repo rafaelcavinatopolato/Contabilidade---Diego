@@ -58,7 +58,7 @@ export function Footer() {
               fontWeight: 300,
               fontSize: "10px",
               letterSpacing: "0.3em",
-              color: "rgba(201,145,58,0.6)",
+              color: "rgba(212,130,74,0.6)",
               textTransform: "uppercase",
               marginBottom: "20px",
             }}
@@ -179,20 +179,20 @@ export function Footer() {
                   justifyContent: "center",
                   width: "40px",
                   height: "40px",
-                  border: "1px solid rgba(201,145,58,0.2)",
+                  border: "1px solid rgba(212,130,74,0.2)",
                   color: "rgba(248,246,241,0.4)",
                   textDecoration: "none",
                   transition: "border-color 0.3s ease, color 0.3s ease",
                 }}
                 onMouseEnter={(e) => {
                   (e.currentTarget as HTMLElement).style.borderColor =
-                    "rgba(201,145,58,0.6)";
+                    "rgba(212,130,74,0.6)";
                   (e.currentTarget as HTMLElement).style.color =
                     "var(--color-accent)";
                 }}
                 onMouseLeave={(e) => {
                   (e.currentTarget as HTMLElement).style.borderColor =
-                    "rgba(201,145,58,0.2)";
+                    "rgba(212,130,74,0.2)";
                   (e.currentTarget as HTMLElement).style.color =
                     "rgba(248,246,241,0.4)";
                 }}
@@ -233,7 +233,7 @@ export function Footer() {
             fontWeight: 300,
             fontSize: "11px",
             letterSpacing: "0.06em",
-            color: "rgba(201,145,58,0.3)",
+            color: "rgba(212,130,74,0.3)",
           }}
         >
           CRC · Política de Privacidade

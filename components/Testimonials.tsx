@@ -24,7 +24,7 @@ export function Testimonials({ eyebrow, title, items }: TestimonialsProps) {
     <section
       id="depoimentos"
       style={{
-        background: "#EEF1F8",
+        background: "var(--color-surface)",
         padding: "clamp(80px, 10vw, 128px) clamp(24px, 7vw, 96px)",
         position: "relative",
       }}
@@ -85,7 +85,7 @@ export function Testimonials({ eyebrow, title, items }: TestimonialsProps) {
                 background: "var(--color-surface)",
                 padding: "clamp(28px, 3vw, 40px)",
                 position: "relative",
-                border: "1px solid rgba(27,43,75,0.07)",
+                border: "1px solid rgba(139,69,19,0.08)",
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",

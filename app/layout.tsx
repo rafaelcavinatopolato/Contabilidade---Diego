@@ -31,15 +31,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const cssVars = {
-    "--color-primary": "#1B2B4B",
-    "--color-accent": "#C9913A",
-    "--color-background": "#F8F6F1",
-    "--color-surface": "#FFFFFF",
-    "--color-text": "#141B2D",
-    "--color-muted": "#6B7A94",
-    "--color-dark": "#0F1929",
+    "--color-primary":    "#8B4513",
+    "--color-accent":     "#D4824A",
+    "--color-background": "#F5E6D3",
+    "--color-surface":    "#FAF3EC",
+    "--color-text":       "#2C1A0E",
+    "--color-muted":      "#9B7355",
+    "--color-dark":       "#2C1A0E",
     "--font-heading": "'Plus Jakarta Sans', system-ui, sans-serif",
-    "--font-body": "'Inter', system-ui, sans-serif",
+    "--font-body":    "'Inter', system-ui, sans-serif",
     "--shape-radius": "0px",
   } as React.CSSProperties;
 
